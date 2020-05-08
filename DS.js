@@ -103,6 +103,52 @@ BinarySearchTree.prototype.insert = function(value) {
     }
   }
 }
+/* BinarySearchTree.prototype.depthFirstForEach = function(cb, order){
+  if(order === 'pre-order'){ 
+  cb(this.value);
+   if(this.left !== null){
+    this.left.depthFirstForEach(cb, order);
+   }
+   if(this.right !== null){
+     this.right.depthFirstForEach(cb, order);
+   }
+  }else
+ if(order === 'post-order'){
+  
+  if(this.left !== null){
+   this.left.depthFirstForEach(cb, order);
+  }
+  if(this.right !== null){
+    this.right.depthFirstForEach(cb, order);
+  }
+  cb(this.value);
+ }else{
+
+ if(this.left !== null){
+  this.left.depthFirstForEach(cb, order);
+ }
+ cb(this.value);
+ if(this.right !== null){
+   this.right.depthFirstForEach(cb, order);
+ }
+}
+}
+BinarySearchTree.prototype.breadthFirstForEach = function(cb, array){
+  
+  if(array == null){
+    var array = [];
+  }
+  if(this.left !== null){
+   array.push(this.left);
+  }
+  if(this.right !== null){
+    array.push(this.right);
+  }
+  cb(this.value);
+  if(array.length>0){
+    array.shift().breadthFirstForEach(cb, array);
+  }
+} */
 
 BinarySearchTree.prototype.size = function() {
   if(this.value === null){
